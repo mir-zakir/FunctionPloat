@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <title>Plotting functions</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body onload="plot();">
+    <h2>Interactive function plotter</h2>
+    <div class="layer">
+      <section id="plotSettings">
+        <label for="xMin">xMin: </label> value:
+        <input type="number" id="xMin" value="-6" step="1" oninput="plot();" />
+        <p></p>
+        <label for="xMin">xMax: </label> value:
+        <input type="number" id="xMax" value="6" step="1" oninput="plot();" />
+        <p></p>
+        <label for="yMin">yMin: </label> value:
+        <input type="number" id="yMin" value="-6" step="1" oninput="plot();" />
+        <p></p>
+        <label for="yMax">yMax: </label> value:
+        <input type="number" id="yMax" value="6" step="1" oninput="plot();" />
+        <p></p>
+        <label for="color">Color: </label> value:
+        <input type="color" id="color" onchange="plot();" />
+        <p></p>
+        <label for="function">Function to plot: </label>
+        <input id="function" type="text" value="sin(x)" onchange="plot();" />
+        <p></p>
+        <button onclick="plot();">Plot This</button>
+      </section>
+
+      <section id="plot">
+        <div id="myFunction"></div>
+      </section>
+    </div>
+
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <script src="https://mauriciopoppe.github.io/function-plot/js/function-plot.js"></script>
+    <script src="plot.js"></script>
+  </body>
+</html>
